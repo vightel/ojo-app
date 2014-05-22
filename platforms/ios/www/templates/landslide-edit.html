@@ -1,0 +1,115 @@
+	
+<ion-view title="Report A Landslide">
+
+	 <ion-nav-buttons side="right">
+		<i class='ion-camera' ng-click="photo()" ></i>&nbsp;
+		<i class='ion-earth'  ng-click="map()" ></i>&nbsp;
+	</ion-nav-buttons>
+
+	<ion-content has-header="true">
+<style>
+* {
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: default; 
+
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: auto; 
+
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: auto; 
+}
+</style>
+		<!-- Edit Dialog -->
+		<div id='edit'>
+			<form ng-submit="createLandslide(l)">
+				<div class="list">
+					<label class="item item-input">
+					    <div class="input-label">
+					         Name
+					    </div>
+						<input type="text" placeholder="Name" ng-model="l.title">
+					</label>
+
+					<label class="item item-input">
+					    <span class="input-label">
+					         Date
+					    </span>
+						<input type="date" placeholder="Date" ng-model="l.date" value={{date}}>
+					</label>
+
+					<label class="item item-input">
+					    <span class="input-label">
+					         Time
+					    </span>
+						<input type="text" placeholder="Time" ng-model="l.time" value={{time}}>
+					</label>
+
+					<label class="item item-input">
+						<span class="input-label">
+							Fatalities
+						</span>
+						<input type="number" placeholder="Fatalities" ng-model="l.fatalities">
+					</label>
+
+					<label class="item item-input">
+						<span class="input-label">
+							Injuries
+						 </span>
+						<input type="number" placeholder="Injuries" ng-model="l.injuries">
+					</label>
+
+					<label class="item item-input">
+						<span class="input-label">
+							Trigger
+					    </span>
+						<input type="text" placeholder="Trigger" ng-model="l.trigger">
+					</label>
+
+					<label class="item item-input item-select">
+						<span class="input-label">
+							Size
+						 </span>
+					    <select ng-model="l.landslide_size">
+							<option>Small</option>
+							<option selected>Medium</option>
+							<option>Large</option>
+						</select>
+					</label>
+
+					<label class="item item-input item-select">
+						<span class="input-label">
+							Type
+						</span>
+						<select ng-model="l.landslide_type">
+							<option selected>Landslide</option>
+							<option>Mudslide</option>
+							<option>Rockslide</option>
+						</select>
+					   
+					</label>
+
+					<label class="item item-input">
+						<span class="input-label">
+							Storm Name
+						</span>
+						<input type="text" placeholder="Storm Name" ng-model="l.storm_name">
+					</label>
+
+					<label class="item item-input">
+						<span class="input-label">
+							Comments
+						</span>
+						<input type="text" placeholder="Comments" ng-model="l.comments">
+					</label>
+				</div>
+			
+				<div class="padding">
+					<button type="submit" class="button button-block button-positive">Report Landslide</button>
+				</div>
+			</form>
+		</div>
+	</ion-content>	
+</ion-view>

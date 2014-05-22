@@ -1,0 +1,103 @@
+* {
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: none; 
+
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: none; 
+
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: none; 
+}
+
+.leaflet-map-pane{
+    -webkit-transform: translate3d(0px,0px,0px);
+}
+
+/*turn off webkit checkbox style, works for other inputs too*/
+input[type="checkbox"] { -webkit-appearance: none; }
+
+/*placeholder text opacity*/
+input::-webkit-input-placeholder { opacity: .8; }
+
+html,
+body {
+    height:		100%;
+    width:		100%;
+    padding: 	0px;
+    margin:		0px;
+    font-family:'Helvetica', arial;
+  }
+
+#map {
+    position: 	absolute;
+    top:		1px;
+    left:		5px;
+    height: 	300px;
+    width: 		300px;
+}
+
+#report_map {
+    position: 	absolute;
+    top:		0px;
+    left:		5px;
+    height: 	300px;
+    width: 		300px;
+}
+
+#buttons {
+    position: 	absolute;
+	top: 		298px;
+    left:		5px;
+	text-align: left;
+}
+
+#legend {
+    position: 	absolute;
+	top: 		300px;
+    left:		301px;
+	text-align: right;
+}
+
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 18px solid rgba(0, 0, 0, 0);
+    border-right: 18px solid rgba(0, 0, 0, 0);
+    border-bottom: 60px solid rgba(39, 39, 39, 0.82);
+    z-index: 10;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    color:white;
+}
+
+#arrow-text {
+    position: absolute;
+    left: 32px;
+    top: 76px;
+    color: #3C3C3C;
+    z-index: 11;
+}
+
+.slider {
+  height: 50%;
+  top: 305px;
+}
+
+.slider-slide {
+  padding-top: 0px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 100;
+}
+
+.item-toggle {
+    border-color: rgba(221,221,221,0);
+}
+	

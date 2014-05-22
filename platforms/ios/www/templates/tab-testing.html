@@ -1,0 +1,51 @@
+<style>
+* {
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: default; 
+
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: auto; 
+
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: auto; 
+}
+</style>
+
+<ion-view title="Profile">
+  <ion-content class="has-header padding">
+    <h1>Testing</h1>
+
+	<div class="list">
+	  <label class="item item-input">
+	    <input type="text" placeholder="First Name" />
+	  </label>
+	  
+	  <label class="item item-input">
+	    <input type="text" placeholder="Last Name" />
+	  </label>
+	  
+	  <label class="item item-input">
+	    <textarea placeholder="Comments"></textarea>
+	  </label>
+	  
+	  <label class="item item-input">
+	    <span class="input-label">Email</span>
+	    <input type="email" />
+	  </label>
+	  
+	  <label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input type="search" placeholder="Search" />
+	  </label>
+	  
+	  <label class="item item-input">
+	    <span class="input-label">Number</span>
+	    <input type="number" />
+	  </label>
+	  
+	</div>
+  </ion-content>
+</ion-view>

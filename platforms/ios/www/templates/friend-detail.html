@@ -1,0 +1,27 @@
+<ion-view title="Report A {{friend.name}}">
+	 <ion-nav-buttons side="right">
+		<i class='ion-camera' ng-click="takePicture()" ></i>&nbsp;
+		<i class='{{icon}}' ng-click="edit()" ></i>&nbsp;
+	</ion-nav-buttons>
+	
+	<ion-content has-header="true" onload="showMap()">
+		
+		<!-- MAP -->
+		<div id='report_map' ng-show="mapit" data-tap-disabled="true"></div>
+		
+
+		
+		<!-- Take a Picture -->
+		<div id='camera' ng-show="pictureit">
+			<img src='img/brazil.jpg' width='300'><br/>
+			<button class='button button-positive'>Take Picture</button>
+		</div>
+		
+		<!-- Report Result -->
+		<div id='report' ng-show="reported">
+			<br/>
+			<div>Landslide has been reported succesfully.<br/><br/>
+			Thank you!</div>
+		<div>
+	</ion-content>	
+</ion-view>

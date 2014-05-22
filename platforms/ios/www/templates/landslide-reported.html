@@ -1,0 +1,15 @@
+<ion-view title="Report A Landslide">
+	 <ion-nav-buttons side="right">
+		<i class='ion-camera' ng-click="takePicture()" ></i>&nbsp;
+		<i class='{{icon}}' ng-click="edit()" ></i>&nbsp;
+	</ion-nav-buttons>
+	
+	<ion-content has-header="true">
+		<!-- Report Result -->
+		<div id='report' ng-show="reported">
+			<br/>
+			<div>Landslide has been reported succesfully.<br/><br/>
+			Thank you!</div>
+		<div>
+	</ion-content>	
+</ion-view>

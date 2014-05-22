@@ -1,0 +1,82 @@
+<ion-view title="{{node.name}}">
+	<ion-content has-header="true" padding="true">
+
+		<div id='map' data-tap-disabled="true"></div>
+		
+		<div id='legend-content' style='display: none;'>
+		</div>   
+
+		<div id='buttons'>			
+			<a href='' ng-click="CreditClick()">credits</a>&nbsp;
+			<a href='' ng-click="LegendClick()">legend</a>
+		</div>
+		
+		<ion-slide-box on-slide-changed="slideChanged(index)">
+			<ion-slide>
+				<ion-toggle ng-model="layers.landslideCatalog.checked"
+					ng-change="landslideCatalogChange()">
+					<b>Landslide Catalog</b>
+				</ion-toggle>
+				<br/>
+	  		</ion-slide>
+
+			<ion-slide>
+				<ion-toggle ng-model="layers.landslideRisk.checked"
+						ng-change="landslideRiskChange()">
+				           <b>Landslide Risk</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+			
+			<ion-slide>
+				<ion-toggle ng-model="layers.landslideSusceptibility.checked"
+						ng-change="landslideSusceptibilityChange()">
+				           <b>Landslide Susceptibility</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+
+			<ion-slide>
+				<ion-toggle ng-model="layers.dailyPrecip.checked"
+						ng-change="dailyPrecipChange()">
+				          <b>Last 24hr Precip</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+
+			<ion-slide>
+				<ion-toggle ng-model="layers.precipForecast.checked"
+						ng-change="precipForecastChange()">
+				          <b>Next 24hr Precip Forecast</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+
+			<ion-slide>
+				<ion-toggle ng-model="layers.floodRisk.checked"
+						ng-change="floodRiskChange()">
+				          <b>Flood Risk</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+			
+			<ion-slide>
+				<ion-toggle ng-model="layers.floodCatalog.checked"
+						ng-change="floodCatalogChange()">
+				          <b>Flood Catalog</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+			
+			<ion-slide>
+				<ion-toggle ng-model="layers.eo1FloodMap.checked"
+						ng-change="eo1FloodMapChange()">
+				          <b>EO-1 Flood Map</b>
+				</ion-toggle>
+				<br/>
+			</ion-slide>
+			
+		</ion-slide-box>
+		
+	</ion-content>
+</ion-view>

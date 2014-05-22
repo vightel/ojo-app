@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ionicframework.starter" version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:cdv="http://cordova.apache.org/ns/1.0" 	
+		xmlns:gap="http://phonegap.com/ns/1.0" >
+    <name>OJO-App</name>
+    <description>
+        OJO Mobile Client for Disasters.
+    </description>
+    
+    <author email="pat@cappelaere.com" href="http://www.geobliki.com/">
+      GeoBliki
+    </author>
+    
+    <content src="index.html" />
+    
+    <access origin="*" />
+    
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    
+	<feature name="StatusBar">
+      <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    
+	<feature name="Logger">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
+ 
+    <feature name="http://api.phonegap.com/1.0/device"/>
+    <feature name="http://api.phonegap.com/1.0/battery"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+	
+	<gap:plugin name="com.auth0.sdk" />
+	
+	<icon src="res/icons/" />
+	
+</widget>
